@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mineirão - Relatórios de Produtos</title>
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Font Awesome para os ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+
+</head>
+<body>
+  <div class="container">
+    <h1>Mineirão - Relatórios de Produtos</h1>
+
+    <form id="relatorio-form">
+      <!-- Empresa -->
+      <label for="empresa">Empresa</label>
+      <select id="empresa" required>
+        <option value="Mineirão" selected>Mineirão</option>
+      </select>
+
+      <!-- Fornecedor -->
+      <label for="fornecedor">Fornecedor</label>
+      <select id="fornecedor" required>
+        <option disabled selected>Escolha o fornecedor</option>
+      </select>
+
+      <!-- Produto -->
+      <label for="produto">Produto</label>
+      <select id="produto" required>
+        <option disabled selected>Escolha o produto</option>
+      </select>
+
+      <!-- Estoque + tipo -->
+      <label for="estoque">Estoque</label>
+      <div class="estoque-grupo">
+        <input
+          type="number"
+          id="estoque"
+          placeholder="Qtd"
+          inputmode="numeric"
+          min="0"
+          required
+        />
+        <label for="tipoEstoque">-</label>
+        <select id="tipoEstoque" required>
+          <option value="UND" selected>UND</option>
+          <option value="CX">CX</option>
+        </select>
+      </div>
+
+      <!-- Validade -->
+      <label for="validade">Validade</label>
+      <input
+        type="date"
+        id="validade"
+        required
+      />
+
+      <!-- Preço -->
+      <label for="preco">Preço</label>
+      <input
+        type="text"
+        id="preco"
+        placeholder="Preço (ex: 2,99)"
+        pattern="^\d+(,\d{1,2})?$"
+        required
+      />
+
+      <!-- Botão -->
+      <button type="submit">Adicionar Relatório</button>
+    </form>
+
+    <!-- Tabelas por empresa -->
+    <div id="tabelas-container" class="table-container">
+      <!-- As tabelas são inseridas via JS -->
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
