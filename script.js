@@ -97,8 +97,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const logosDiv = document.createElement('div');
         logosDiv.className = 'top-logos';
         logosDiv.innerHTML = `
-          <img src="img/mineirao.png" alt="Mineirão Atacarejo" />
-          <img src="img/Captura.png" alt="Apoiar Serviços" />
+          <img src="mineirao.png" alt="Mineirão Atacarejo" />
+          <img src="Captura.png" alt="Apoiar Serviços" />
         `;
         wrapper.appendChild(logosDiv);
 
