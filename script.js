@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!valor) return '';
     const numero = parseFloat(valor.replace(',', '.'));
     if (isNaN(numero)) return '';
-    return 'R$ ' + numero.toFixed(2).replace('.', ',');
+    return numero.toFixed(2).replace('.', ',');
   }
 
   function validarFormulario() {
